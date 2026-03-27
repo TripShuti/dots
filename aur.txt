@@ -1,0 +1,6 @@
+feishin
+google-chrome
+jellyfin-desktop
+sysc-greet-hyprland
+yay
+yay-debug
