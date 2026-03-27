@@ -45,7 +45,7 @@
         "locale": "uk_UA.UTF-8"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "{volume}% {icon} ",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -57,7 +57,8 @@
             "default": ["", ""]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "tray": {
         "icon-size": 16,
