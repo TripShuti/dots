@@ -1,3 +1,9 @@
+gvfs 
+gvfs-mtp 
+gvfs-nfs
+nwg-look
+breeze-icons
+breeze-gtk
 blueman
 bluez
 bluez-utils
