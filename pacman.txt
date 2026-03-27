@@ -5,11 +5,9 @@ cava
 code
 engrampa
 fastfetch
-feishin
 fish
 git
 github-cli
-google-chrome
 greetd
 greetd-tuigreet
 grim
@@ -19,7 +17,6 @@ hyprlauncher
 hyprpaper
 hyprpolkitagent
 imagemagick
-jellyfin-desktop
 kitty
 libpulse
 libreoffice-fresh
@@ -37,7 +34,6 @@ slurp
 starship
 steam
 swaync
-sysc-greet-hyprland
 telegram-desktop
 thunar
 ttf-dejavu
@@ -49,8 +45,5 @@ waybar
 wireplumber
 wpa_supplicant
 xdg-desktop-portal-hyprland
-yay
-yay-debug
-yazi
 yt-dlp
-zram-generator
+
