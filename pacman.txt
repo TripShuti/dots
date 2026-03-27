@@ -9,7 +9,6 @@ fish
 git
 github-cli
 greetd
-greetd-tuigreet
 grim
 gst-plugin-pipewire
 hyprland
