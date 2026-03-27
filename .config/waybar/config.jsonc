@@ -1,5 +1,4 @@
 {
-
     "layer": "top",
     "position": "top",
     "height": 34,
@@ -10,7 +9,8 @@
     "exclusive": true,
     "modules-left": [
         "hyprland/workspaces",
-        "group/mediaplayer"
+        "group/mediaplayer",
+        "custom/cava"
     ],
     "modules-center": [
         "clock"
@@ -19,7 +19,6 @@
         "tray",
         "pulseaudio"
     ],
-
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -34,6 +33,10 @@
             "focused": "",
             "default": ""
         }
+    },
+    "custom/cava": {
+        "exec": "stdbuf -o0 cava -p ~/.config/waybar/cava.conf | sed -u 's/;//g;s/0/ /g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g'",
+        "format": "{}"
     },
     "clock": {
         "format": "{:%H:%M}",
@@ -51,10 +54,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": [
-                "",
-                ""
-            ]
+            "default": ["", ""]
         },
         "scroll-step": 1,
         "on-click": "pavucontrol"
@@ -63,7 +63,6 @@
         "icon-size": 16,
         "spacing": 10
     },
-
     "group/mediaplayer": {
         "orientation": "inherit",
         "drawer": {
