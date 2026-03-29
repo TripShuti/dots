@@ -81,7 +81,7 @@
     },
     "custom/mediaplayer": {
         "format": "󰎆 {}",
-        "max-length": 40,
+        "max-length": 30,
         "escape": true,
         "exec": "playerctl -a metadata --format '{{artist}} - {{title}}' -F",
         "on-click": "playerctl play-pause"
