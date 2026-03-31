@@ -2,7 +2,7 @@ function fish_greeting
     # do nothing
     fastfetch
 end 
-# Theme: bl1nk (відповідно до Kitty)
+
 set -g fish_color_normal A0A0A0
 set -g fish_color_command B5E354
 set -g fish_color_quote FEED6B
@@ -26,3 +26,4 @@ if status is-interactive
     starship init fish | source
 end
 set -gx STARSHIP_CONFIG ~/.config/starship/config.toml
+alias dotsync="git add .; and git commit -m 'update '(date +%H:%M); and git push"
