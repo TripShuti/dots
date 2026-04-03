@@ -80,6 +80,7 @@ window#waybar {
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-weight: 500;
     font-size: 14px;
+    margin-left: 0px;
 }
 
 #tray {
@@ -104,4 +105,7 @@ tooltip {
 }
 #custom-hyprsunset.off {
     color: #f8f8f2; /* Стандартний колір, коли вимкнено */
+}
+#language {
+    font-size: 12px;
 }
