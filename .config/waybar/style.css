@@ -83,7 +83,7 @@ window#waybar {
 }
 
 #tray {
-    padding: 4px 10px;
+    padding: 4px 6px;
 }
 
 tooltip {
@@ -98,4 +98,10 @@ tooltip {
     font-size: 18px;
     padding-left: 2px;
     padding-right: 2px;
+}
+#custom-hyprsunset.on {
+    color: #ffb86c; /* Теплий помаранчевий колір, коли увімкнено */
+}
+#custom-hyprsunset.off {
+    color: #f8f8f2; /* Стандартний колір, коли вимкнено */
 }

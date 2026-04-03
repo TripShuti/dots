@@ -17,7 +17,8 @@
     ],
     "modules-right": [
         "tray",
-        "pulseaudio"
+        "pulseaudio",
+        "custom/hyprsunset"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -103,5 +104,13 @@
         "tooltip": true,
         "tooltip-format": "previous",
         "on-click": "playerctl previous"
+    },
+"custom/hyprsunset": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "exec": "if [ -f /tmp/waybar_hyprsunset_on ]; then echo '{\"text\": \"\", \"tooltip\": \"Нічний режим: Увімкнено\", \"class\": \"on\"}'; else echo '{\"text\": \"\", \"tooltip\": \"Нічний режим: Вимкнено\", \"class\": \"off\"}'; fi",
+        "on-click": "if [ -f /tmp/waybar_hyprsunset_on ]; then rm /tmp/waybar_hyprsunset_on; hyprctl hyprsunset identity; else touch /tmp/waybar_hyprsunset_on; hyprctl hyprsunset temperature 4500; fi; pkill -SIGRTMIN+8 waybar"
     }
 }
