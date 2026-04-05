@@ -101,10 +101,10 @@ tooltip {
     padding-right: 2px;
 }
 #custom-hyprsunset.on {
-    color: #ffb86c; /* Теплий помаранчевий колір, коли увімкнено */
+    color: #ffb86c; 
 }
 #custom-hyprsunset.off {
-    color: #f8f8f2; /* Стандартний колір, коли вимкнено */
+    color: #f8f8f2;
 }
 #language {
     font-size: 12px;

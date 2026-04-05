@@ -25,6 +25,9 @@
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{icon}",
+        "persistent-workspaces": {
+        "*": 4 
+    },
         "format-icons": {
             "1": "I",
             "2": "II",
