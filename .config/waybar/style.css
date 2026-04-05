@@ -13,12 +13,6 @@ window#waybar {
     margin: 10px 10px 0px 10px;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-    background-color: transparent;
-}
-
 #workspaces,
 #clock,
 #pulseaudio,
