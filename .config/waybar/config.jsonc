@@ -1,0 +1,34 @@
+{
+    "include": ["/home/trip/.config/waybar/modules.jsonc"],
+    "layer": "top",
+    "passthrough": false,
+    "position": "center",
+    "height": 38,
+    "margin-top": 5,
+    "margin-right": 5,
+    "margin-left": 5,
+    "spacing": 0,
+    "exclusive": true,
+    "tooltips": true,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/mediaplayer",
+        "cava"
+    ],
+    
+    "modules-center": [
+        "custom/hyprsunset",
+        "clock",
+        "custom/app-launcher",
+        "custom/genshin"
+    ],
+
+    "modules-right": [
+        "custom/timer",
+        "pulseaudio",
+        "custom/pacman",
+        "bluetooth",
+        "custom/power"
+    ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>kitty</icon>
+	<name>Відкрити в Kitty</name>
+	<unique-id>kitty-open-here</unique-id>
+	<command>kitty --directory %f</command>
+	<description>Відкрити термінал у цій теці</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

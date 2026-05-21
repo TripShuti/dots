@@ -1,0 +1,61 @@
+hl.config({
+    general = {
+        gaps_in  = 5,
+        gaps_out = 5,
+        border_size = 2,
+        col = {
+            active_border   = { colors = {"rgba(3a452aaa)", "rgba(4b543eaa)"}, angle = 45 },
+            inactive_border = "rgba(111a1294)",
+        },
+        resize_on_border = false,
+        allow_tearing    = false,
+        layout           = "dwindle",
+    },
+
+    dwindle = {
+        preserve_split = true,
+    },
+
+    cursor = {
+        no_warps = true,
+    },
+
+    misc = {
+        focus_on_activate = true,
+    },
+
+    decoration = {
+        rounding       = 10,
+        rounding_power = 2,
+        active_opacity   = 0.900,
+        inactive_opacity = 0.800,
+        shadow = {
+            enabled      = true,
+            range        = 4,
+            render_power = 3,
+            color        = "rgba(1a1a1aee)",
+        },
+        blur = {
+            enabled  = true,
+            size     = 3,
+            passes   = 3,
+            vibrancy = 0.1696,
+        },
+    },
+
+    input = {
+        kb_layout  = "us, ua",
+        kb_options = "grp:alt_shift_toggle",
+        follow_mouse = 1,
+    },
+
+    animations = {
+        enabled = true,
+    },
+})
+
+hl.device({
+    name          = "e-signal-hator-pulsar",
+    sensitivity   = -0.1,
+    accel_profile = "flat"
+})

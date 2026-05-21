@@ -1,0 +1,88 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+    modi: "drun";
+    show-icons: true;
+    display-drun: "  ";
+    drun-display-format: "{name}";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    
+    /* Gruvbox Dark Palette */
+    bg: #282828e6;       /* bg0_h */
+    bg-alt: #3c3836;     /* bg1 */
+    fg: #ebdbb2;         /* fg1 */
+    accent: #fabd2f;     /* yellow */
+    accent-fg: #282828;  /* bg0 */
+
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    width: 450px;
+    border-radius: 12px;
+    border: 2px solid;
+    border-color: @bg-alt;
+    padding: 20px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    padding: 12px 15px;
+    border-radius: 8px;
+    children: [ prompt, entry ];
+    margin: 0 0 20px 0;
+}
+
+prompt {
+    text-color: @accent;
+    padding: 0 10px 0 0;
+    vertical-align: 0.5;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: #928374; /* gray */
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 7;
+    spacing: 5px;
+    scrollbar: false;
+    border: 0px;
+}
+
+element {
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: @accent-fg;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 12px 0 0;
+}
