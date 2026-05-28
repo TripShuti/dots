@@ -25,10 +25,10 @@
     ],
 
     "modules-right": [
+        "tray",
         "custom/timer",
         "pulseaudio",
         "custom/pacman",
-        "bluetooth",
         "custom/power"
     ]
 }

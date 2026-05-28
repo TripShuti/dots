@@ -1,2 +1,1 @@
-feishin
 sysc-greet-hyprland

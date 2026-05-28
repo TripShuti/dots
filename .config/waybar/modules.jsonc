@@ -1,4 +1,15 @@
 {
+    "tray": {
+    "icon-size": 16,
+    "spacing": 8,
+    "icons": {
+        "blueman": "bluetooth",
+        "TelegramDesktop": "/home/trip/.local/share/icons/Gruvbox-Plus-Dark/apps/16/telegram.svg",
+        "steam": "/home/trip/.local/share/icons/Gruvbox-Plus-Dark/panel/16/steam_tray_mono.svg"
+    }
+
+    },
+
     "custom/mediaplayer": {
         "format": "{}",
         "max-length": 25,

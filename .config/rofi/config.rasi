@@ -1,4 +1,5 @@
 configuration {
+    click-to-exit: true;
     font: "JetBrainsMono Nerd Font 12";
     modi: "drun";
     show-icons: true;

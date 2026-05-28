@@ -10,6 +10,6 @@ case "$chosen" in
     "$shutdown") systemctl poweroff ;;
     "$reboot") systemctl reboot ;;
     "$suspend") systemctl suspend ;;
-    "$logout") hyprctl dispatch exit ;;
+    "$logout") hyprctl dispatch 'hl.dsp.exit()' ;;
     "$lock") hyprlock ;; 
 esac
