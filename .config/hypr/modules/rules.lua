@@ -1,3 +1,4 @@
+
 hl.window_rule({
     name  = "telegram-on-ws1",
     match = { class = "^(org\\.telegram\\.desktop)$" },
@@ -37,6 +38,25 @@ hl.window_rule({
     float = true,
     size = "460 500",
     move = "10 50"
+})
+hl.window_rule({
+    name = "blender-file",
+    match = { class = "blender", title = "^(File Browser|Blender File View)$" },
+    float = true,
+    size = "982 577",
+    center = true
+})
+hl.window_rule({
+  match   = { class = "blender" },
+  opacity = "1.0 override 0.5 override 0.8 override",
+})
+hl.window_rule({
+  match   = { title = "Lineage II" },
+  opacity = "1.0 override 0.5 override 0.8 override",
+})
+hl.window_rule({
+  match   = { class = "imv" },
+  opacity = "1.0 override 0.5 override 0.8 override",
 })
 
 hl.window_rule({

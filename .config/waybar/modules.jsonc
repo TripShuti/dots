@@ -12,7 +12,7 @@
 
     "custom/mediaplayer": {
         "format": "{}",
-        "max-length": 25,
+        "max-length": 30,
         "escape": true,
         "exec": "playerctl -p Feishin -a metadata --format '{{artist}} - {{title}}' -F",
         "on-click": "playerctl -p Feishin play-pause",
@@ -143,6 +143,12 @@
         "signal": 9,
         "exec": "if [ -f /tmp/waybar_hyprsunset_on ]; then echo '{\"text\": \"\", \"tooltip\": \"Нічний режим: Увімкнено\", \"class\": \"on\"}'; else echo '{\"text\": \"\", \"tooltip\": \"Нічний режим: Вимкнено\", \"class\": \"off\"}'; fi",
         "on-click": "if [ -f /tmp/waybar_hyprsunset_on ]; then rm /tmp/waybar_hyprsunset_on; killall hyprsunset; else touch /tmp/waybar_hyprsunset_on; hyprsunset -t 4500 & fi; pkill -SIGRTMIN+9 waybar"
-    }
+    },
+
+    "hyprland/language": {
+    "format": " {}",
+    "format-en": "EN",
+    "format-uk": "UA"
+  }
 
 }

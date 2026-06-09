@@ -15,18 +15,27 @@ window#waybar {
     border-radius: 24px;
     padding: 2px 14px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 .modules-left {
     background-color: rgba(17, 26, 18, 0.6);
     border-radius: 24px;
     padding: 2px 14px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-left: 10;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    
 }
 .modules-right {
     background-color: rgba(17, 26, 18, 0.6);
     border-radius: 24px;
     padding: 2px 14px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-right: 10;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 tooltip {
@@ -45,6 +54,7 @@ tooltip label {
 }
 
 #workspaces,
+#language
 #clock,
 #custom-hyprsunset,
 #custom-app-launcher,
