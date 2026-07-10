@@ -1,0 +1,12 @@
+layer=top
+width=450
+lines=7
+dynamic_lines=true
+location=center
+show=drun
+prompt=Search...
+allow_images=true
+insensitive=true
+term=kitty
+hide_scroll=true
+dynamic_lines=true

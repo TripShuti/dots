@@ -1,0 +1,165 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+.modules-center {
+    background-color: rgba(17, 26, 18, 0.6);
+    border-radius: 12px;
+    padding: 1px 14px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.modules-left {
+    background-color: rgba(17, 26, 18, 0.6);
+    border-radius: 12px;
+    padding: 1px 14px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-left: 10;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    
+}
+.modules-right {
+    background-color: rgba(17, 26, 18, 0.6);
+    border-radius: 12px;
+    padding: 1px 14px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-right: 10;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+tooltip {
+    background: rgba(17, 26, 18, 0.95);
+    border-radius: 12px;
+    padding: 15px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.177);
+}
+
+tooltip label {
+    color: #d2d9c8;
+    padding: 8px;
+    font-family: "JetBrains Mono";
+}
+
+#workspaces,
+#language,
+#clock,
+#custom-app-launcher,
+#custom-genshin,
+#pulseaudio,
+#bluetooth,
+#custom-timer,
+#custom-power,
+#tray,
+#custom-pacman{
+    padding: 0 4px;
+    margin: 4px 0;
+}
+#bluetooth{
+    color: #b0b88b;
+}
+#custom-power{
+    color: #c49a31;
+}
+
+#clock {
+    color: #b0b88b;
+}
+
+#custom-hyprsunset.on {
+    color: #b0b88b;
+}
+
+#custom-hyprsunset.off {
+    color: #d2d9c8;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #8c9977;
+    padding: 2px 8px;
+    margin: 0 2px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(111, 140, 60, 0.3);
+}
+
+#workspaces button.active {
+    background-color: #6f8c3c;
+    color: #0b120c;
+}
+
+#workspaces button.urgent {
+    background-color: #7d342a;
+    color: #d2d9c8;
+}
+
+#custom-genshin {
+    color: #c49a31;
+}
+
+#custom-app-launcher {
+    color: #c49a31;
+    font-size: 18px;
+}
+
+#custom-timer {
+    color: #ebdbb2;
+}
+
+#custom-timer.running {
+    color: #fabd2f;
+}
+
+#custom-timer.done {
+    color: #fb4934;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio {
+    color: #6f8c3c;
+}
+
+#pulseaudio.muted {
+    color: #7d342a;
+}
+
+
+#custom-mediaplayer {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 4px 6px;
+}
+
+#cava {
+    padding: 4px 6px;
+    color: #c49a318e;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #fb4934;
+        color: #282828;
+    }
+}

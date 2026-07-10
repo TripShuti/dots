@@ -1,0 +1,17 @@
+[flavor]
+dark = "everforest-medium"
+[icon]
+prepend_dirs = [
+    { name = "Desktop",   text = "󰟀", fg = "#7daea3" },
+    { name = "Documents", text = "󰈙", fg = "#89b482" },
+    { name = "Downloads", text = "󰇚", fg = "#d8a657" },
+    { name = "Music",     text = "󰎆", fg = "#d3869b" },
+    { name = "Pictures",  text = "󰉏", fg = "#7daea3" },
+    { name = "Videos",    text = "󰕧", fg = "#e78a4e" },
+    { name = "Public",    text = "󰷌", fg = "#89b482" },
+    { name = "Templates", text = "󰈔", fg = "#928374" },
+]
+
+prepend_conds = [
+    { if = "dir", text = "󰉋", fg = "#d8a657" },
+]

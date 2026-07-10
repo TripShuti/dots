@@ -1,0 +1,237 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(17, 26, 18, 0.6);
+    border-radius: 3px;
+    margin: 4px 0;
+    padding: 0 4px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+.modules-left {
+    margin-left: 8px;
+    border-left: 1px solid rgba(125, 52, 42, 0.5);
+}
+
+.modules-right {
+    margin-right: 8px;
+    border-left: 1px solid rgba(176, 184, 139, 0.5);
+}
+
+.modules-center {
+    border-left: 1px solid rgba(196, 154, 49, 0.5);
+    min-width: 0;
+}
+
+tooltip {
+    background: rgba(17, 26, 18, 0.95);
+    border-radius: 3px;
+    border: 1px solid rgba(111, 140, 60, 0.35);
+    padding: 8px 12px;
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    color: #d2d9c8;
+}
+
+tooltip label {
+    color: #d2d9c8;
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+}
+
+#workspaces,
+#language,
+#clock,
+#custom-app-launcher,
+#custom-genshin,
+#pulseaudio,
+#bluetooth,
+#custom-timer,
+#custom-power,
+#custom-hyprsunset,
+#custom-mediaplayer,
+#cava,
+#tray,
+#custom-pacman {
+    padding: 0 5px;
+    margin: 3px 1px;
+    color: #8c9977;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-app-launcher {
+    color: #c49a31;
+    font-size: 13px;
+    padding: 0 6px;
+    text-shadow: 0 0 8px rgba(196, 154, 49, 0.6);
+    font-family: "JetBrains Mono", monospace;
+}
+
+#workspaces {
+    padding: 0 1px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #8c9977;
+    padding: 2px 7px;
+    margin: 0 1px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.15s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(111, 140, 60, 0.3);
+    color: #d2d9c8;
+}
+
+#workspaces button.active {
+    background-color: #6f8c3c;
+    color: #0b120c;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(125, 52, 42, 0.8);
+    color: #d2d9c8;
+}
+
+#custom-mediaplayer {
+    color: #b0b88b;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    padding: 0 5px;
+}
+
+#cava {
+    color: rgba(196, 154, 49, 0.55);
+    font-size: 12px;
+    letter-spacing: -1.5px;
+    padding: 0 4px;
+}
+
+#clock {
+    color: #b0b88b;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 0 8px;
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    text-shadow: 0 0 8px rgba(176, 184, 139, 0.4);
+    min-width: 42px;
+}
+
+#custom-genshin {
+    color: #c49a31;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    min-width: 0;
+    padding: 0 5px;
+}
+
+#language {
+    color: #b0b88b;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.5px;
+    min-width: 22px;
+    padding: 0 5px;
+}
+
+#tray {
+    padding: 0 3px;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#pulseaudio {
+    color: #6f8c3c;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#pulseaudio.muted {
+    color: #7d342a;
+}
+
+#bluetooth {
+    color: #b0b88b;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#bluetooth.disabled {
+    color: #4a5240;
+}
+
+#custom-pacman {
+    color: #8c9977;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-timer {
+    color: #ebdbb2;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-timer.running {
+    color: #fabd2f;
+    text-shadow: 0 0 5px rgba(250, 189, 47, 0.4);
+}
+
+#custom-timer.done {
+    color: #fb4934;
+    animation: geass-blink 1.8s linear infinite alternate;
+}
+
+#custom-hyprsunset.on {
+    color: #b0b88b;
+}
+
+#custom-hyprsunset.off {
+    color: #d2d9c8;
+}
+
+#custom-power {
+    color: #c49a31;
+    font-size: 13px;
+    padding: 0 6px;
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.15s ease;
+}
+
+#custom-power:hover {
+    color: #fabd2f;
+    text-shadow: 0 0 10px rgba(250, 189, 47, 0.8);
+}
+
+@keyframes geass-blink {
+    from {
+        color: #fb4934;
+        background-color: transparent;
+    }
+    to {
+        color: #282828;
+        background-color: #fb4934;
+        text-shadow: 0 0 12px rgba(251, 73, 52, 0.9);
+    }
+}

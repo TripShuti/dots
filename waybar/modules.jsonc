@@ -1,0 +1,155 @@
+{
+    "tray": {
+    "icon-size": 16,
+    "spacing": 8,
+    "icons": {
+        "blueman": "bluetooth",
+        "TelegramDesktop": "/home/trip/.local/share/icons/Gruvbox-Plus-Dark/apps/16/telegram.svg",
+        "steam": "/home/trip/.local/share/icons/Gruvbox-Plus-Dark/panel/16/steam_tray_mono.svg"
+    }
+
+    },
+
+    "custom/mediaplayer": {
+        "format": "{}",
+        "max-length": 30,
+        "escape": true,
+        "exec": "playerctl -p subtui metadata --format '{{artist}} - {{title}}' -F",
+        "on-click": "playerctl -p subtui play-pause",
+        "on-scroll-up": "playerctl -p subtui next",
+        "on-scroll-down": "playerctl -p subtui previous"
+    },
+
+    "cava": {
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 0.1,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "hide_on_silence": true,
+        "format_silent": "quiet",
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": true,
+        "waves": true,
+        "noise_reduction": 0.27,
+        "input_delay": 2,
+        "format-icons": ["\u2800", "⡀", "⣀", "⣄", "⣤", "⣦", "⣶", "⣷", "⣿"],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+
+    "custom/pacman": {
+    "format": "󰮯 {}",
+    "interval": 3600,                 
+    "exec": "checkupdates 2>/dev/null | wc -l",       
+    "exec-if": "exit 0",                  
+    "on-click-right": "kitty -e sudo pacman -Syu; pkill -SIGRTMIN+8 waybar",
+    "on-click-left": "pkill -SIGRTMIN+8 waybar",
+    "signal": 8
+},
+    "bluetooth": {
+	"format": "",
+    "on-click": "blueman-manager"
+},
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "~/.config/wofi/powermenu.sh"
+    },    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4]
+        },
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+        }
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:L%A,%d,%B  %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#4db6ac'><b><u>{}</u></b></span>"
+            }
+        },
+        "locale": "uk_UA.UTF-8"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} ",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-middle": "systemctl --user restart wireplumber"
+    },
+    "custom/app-launcher": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "󰣇 Application Launcher",
+        "rotate": 0,
+        "on-click": "wofi --show drun"
+    },
+    "custom/genshin": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": 600,
+        "signal": 4,
+        "on-click": "pkill -SIGRTMIN+4 waybar",
+        "exec": "python /home/trip/genshin_stats.py",
+        "tooltip": true
+    },
+    "custom/timer": {
+        "exec": "~/.config/waybar/timer.sh update",
+        "return-type": "json",
+        "on-click": "~/.config/waybar/timer.sh toggle",
+        "on-click-right": "rm -f /tmp/waybar_timer",
+        "on-scroll-up": "~/.config/waybar/timer.sh up",
+        "on-scroll-down": "~/.config/waybar/timer.sh down",
+        "format": "{text}",
+        "tooltip": false
+    },
+    "custom/hyprsunset": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 9,
+        "exec": "if [ -f /tmp/waybar_hyprsunset_on ]; then echo '{\"text\": \" \", \"tooltip\": \"Нічний режим: Увімкнено\", \"class\": \"on\"}'; else echo '{\"text\": \" \", \"tooltip\": \"Нічний режим: Вимкнено\", \"class\": \"off\"}'; fi",
+        "on-click": "if [ -f /tmp/waybar_hyprsunset_on ]; then rm /tmp/waybar_hyprsunset_on; killall hyprsunset; else touch /tmp/waybar_hyprsunset_on; hyprsunset -t 4500 & fi; pkill -SIGRTMIN+9 waybar"
+    },
+
+    "hyprland/language": {
+    "format": " {}",
+    "format-en": "EN",
+    "format-uk": "UA",
+    "on-click": "hyprctl switchxkblayout current next"
+  }
+
+}

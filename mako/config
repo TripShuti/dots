@@ -1,0 +1,27 @@
+max-visible=5
+sort=-time
+
+font=JetBrainsMono Nerd Font 10
+width=300
+height=110
+margin=10,10
+padding=15
+border-size=2
+border-radius=6
+progress-color=over #458588
+
+background-color=#282828E0
+text-color=#ebdbb2
+border-color=#c49a3155
+
+markup=1
+actions=1
+format=<b>%s</b>\n%b
+default-timeout=5000
+ignore-timeout=0
+
+[urgency=high]
+background-color=#282828
+text-color=#fb4934
+border-color=#cc241d
+default-timeout=0
