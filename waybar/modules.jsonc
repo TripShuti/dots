@@ -45,17 +45,22 @@
     },
 
     "custom/pacman": {
-    "format": "󰮯 {}",
-    "interval": 3600,                 
-    "exec": "checkupdates 2>/dev/null | wc -l",       
-    "exec-if": "exit 0",                  
-    "on-click-right": "kitty -e sudo pacman -Syu; pkill -SIGRTMIN+8 waybar",
-    "on-click-left": "pkill -SIGRTMIN+8 waybar",
-    "signal": 8
+        "format": "󰮯 {}",
+        "interval": 3600,                 
+        "exec": "checkupdates 2>/dev/null | wc -l",       
+        "exec-if": "exit 0",                  
+        "on-click-right": "kitty -e sudo pacman -Syu; pkill -SIGRTMIN+8 waybar",
+        "on-click-left": "pkill -SIGRTMIN+8 waybar",
+        "signal": 8
 },
     "bluetooth": {
-	"format": "",
-    "on-click": "blueman-manager"
+        "format": " {status}",
+        "format-disabled": " off",
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "kitty --class bluetui -e bluetui"
 },
     "custom/power": {
         "format": "⏻",
@@ -99,14 +104,14 @@
         "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "default": ["", ""]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol",
+        "on-click": "kitty --class pulsemixer -e /home/trip/pulsemixer/pulsemixer",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-middle": "systemctl --user restart wireplumber"
     },

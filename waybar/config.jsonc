@@ -25,7 +25,7 @@
 
     "modules-right": [
         "hyprland/language",
-        "tray",
+        "bluetooth",
         "custom/timer",
         "pulseaudio",
         "custom/pacman",

@@ -2,13 +2,14 @@
 
 hl.on("window.active", function(w)
     if w ~= nil then
-        if w.class == "kitty" or w.class == "code-oss" then
+        if w.class == "kitty" or w.class == "code-oss" or w.class == "bluetui" or w.class == "pulsemixer" then
             hl.exec_cmd("hyprctl switchxkblayout all 0")
         else
             hl.exec_cmd("hyprctl switchxkblayout all 1")
         end
     end
 end)
+
 hl.window_rule({
     name      = "telegram-on-ws1",
     match     = { class = "^(org\\.telegram\\.desktop)$" },
@@ -34,18 +35,21 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "pavucontrol-float",
-    match = { class = "org.pulseaudio.pavucontrol" },
+    name = "bluetui-float",
+    match = { class = "bluetui" },
     float = true,
-    size  = "750 400"
+    center = true,
+    size = "750 400"
 })
 
 hl.window_rule({
-    name  = "blueman-float",
-    match = { class = "blueman-manager" },
+    name = "pulsemixer-float",
+    match = { class = "pulsemixer" },
     float = true,
-    size  = "450 500"
+    center = true,
+    size = "750 400"
 })
+
 
 hl.window_rule({
     name   = "galculator-float",
@@ -64,29 +68,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name   = "engrampa-float",
-    match  = { class = "engrampa" },
-    float  = true,
-    center = true
-})
-
-hl.window_rule({
-    name  = "thunar-progress",
-    match = { class = "thunar", title = "^(Прогрес файлової операції|Копіювання файлів).*" },
-    float = true,
-    size  = "460 500",
-    move  = "10 50"
-})
-
-hl.window_rule({
-    name   = "thunar-dialogs",
-    match  = { class = "thunar", title = "^(Підтвердіть заміну файлів|Перейменувати).*" },
-    float  = true,
-    center = true,
-    size   = "460 500"
-})
-
-hl.window_rule({
     name   = "blender-file",
     match  = { class = "blender", title = "^(File Browser|Blender File View)$" },
     float  = true,
@@ -96,11 +77,6 @@ hl.window_rule({
 
 hl.window_rule({
     match   = { class = "blender" },
-    opacity = "1.0 override 0.5 override 0.8 override",
-})
-
-hl.window_rule({
-    match   = { title = "Lineage II" },
     opacity = "1.0 override 0.5 override 0.8 override",
 })
 
